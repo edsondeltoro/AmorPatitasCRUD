@@ -40,17 +40,17 @@
                 try {
                     // Configurar el servidor SMTP externo
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.office365.com';
+                    $mail->Host = 'inserthost';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'amorpatitas@hotmail.com';
-                    $mail->Password = 'PatitasAmor';
-                    $mail->SMTPSecure = 'tls';
-                    $mail->Port = 587;
+                    $mail->Username = 'insertmail';
+                    $mail->Password = 'insertpassword';
+                    $mail->SMTPSecure = 'insertSMTP';
+                    $mail->Port = 0;
 
                     // Configurar otros detalles del correo
-                    $mail->setFrom('amorpatitas@hotmail.com', 'Amor Patitas');
-                    $mail->addAddress('edson.deltoro5631@alumnos.udg.mx', 'Administrador Edson');
-                    $mail->addAddress('alberto.romo5395@alumnos.udg.mx', 'Administrador Alberto');
+                    $mail->setFrom('insertmail', 'Amor Patitas');
+                    $mail->addAddress('insertmail', 'Administrador 1');
+                    $mail->addAddress('insertmail', 'Administrador 2');
                     $mail->Subject = 'Seguridad en Amor Patitas';
                     $mail->Body = "Un usuario ha intentado ingresar erroneamente mas de 3 veces, la ultima vez fue con las siguientes credenciales:\n\nUser: $username \nPassword: $password.";
 
