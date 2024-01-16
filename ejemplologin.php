@@ -1,0 +1,176 @@
+
+    <style>
+
+        body {
+            background-image:		url("Imagenes/bg.jpg");
+            background-size: 		cover;
+            background-position: 	center;
+        }
+
+        .seccion {
+            display: 			table;
+            margin: 			100px auto;
+            width:				1065px;
+            height: 			400px;
+            overflow: 			hidden;
+            border-radius: 		15px;
+        }
+
+        #seccionLogin {
+            display: 			table-cell;
+            vertical-align: 	middle;
+            width: 				40%;
+            font-family: 		'Roboto', FontAwesome, sans-serif;
+            background-color: 	#BFA08EDF;
+        }
+
+        #bloqueLogin {
+            margin: 			5%;
+        }
+
+        #campoLogin {
+            width: 				80%;
+            margin: 			0 auto;
+        }
+
+        #FormLogin input[type=text], input[type=password], label {
+            width: 				80%;
+            margin: 			2% 10% 3%;
+            font-size: 			medium;
+            padding: 			2px 2px;
+        }
+
+        input[type=submit] {
+            border: 			none;
+            border-radius: 		4px;
+            cursor: 			pointer;
+        }
+
+        .boton {
+            width: 				80%;
+            margin: 			7% 10% auto;
+            font-size: 			medium;
+            padding: 			5px;
+            transition-duration: 0.4s;
+        }
+
+        #botonLogin {
+            background-color: 	#0E1220;
+            color: 				white;
+            border: 			2px solid #0E1220;
+        }
+
+        #botonLogin:hover {
+            background-color: 	#0E2240;
+        }
+
+        #seccionMensaje {
+            display: 			table-cell;
+            vertical-align: 	middle;
+            font-family: 		'Roboto', sans-serif;
+            background-color:	#D9885925;
+        }
+
+        #bloqueMensaje {
+            margin: 			5%;
+            overflow: 			hidden;
+            color: 				white;
+        }
+
+        #titulo {
+            width: 				100%;
+            font-size: 			250%;
+            text-align: 		center;
+            display: 			block;
+            margin: 			auto auto 30px;
+        }
+
+        #mensaje {
+            width: 				100%;
+            font-size: 			x-large;
+            text-align: 		center;
+            display: 			block;
+            animation: 			movimientoTexto 0.5s linear infinite;
+            position: 			relative;
+            top: 				-25px;
+        }
+
+        @keyframes movimientoTexto {
+            0%{
+                transform: scale(1, 1);
+            }
+            50% {
+                transform: scale(1.1, 1);
+            }
+            100% {
+                transform: scale(1, 1);
+            }
+        }
+
+        @keyframes movimientoAlerta {
+            0%{
+                transform: translate(0px);
+            }
+            25%{
+                transform: translate(6px);
+            }
+            50%{
+                transform: translate(-6px);
+            }
+            75%{
+                transform: translate(6px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
+
+        #descripcion {
+            width: 				100%;
+            font-size: 			large;
+            text-align: 		center;
+            display: 			block;
+            position: 			relative;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="seccion">
+    <div id="seccionLogin">
+        <div id="bloqueLogin">
+            <h1 align="center">Login</h1>
+            <form id="FormLogin" name="FormLogin" method="POST">
+                <div id="campoLogin">
+                    <label for="user">Correo</label>
+                    <input type="text" name="user" id="user" placeholder="alguien@ejemplo.com" maxlength="128"/>
+                </div>
+                <br>
+                <div id="campoLogin">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Password" maxlength="32"/>
+                </div>
+                <div id="campoLogin">
+                    <input id="botonLogin" class="boton" type="submit" value="Login" onclick="validaCampos(); return false;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="seccionMensaje">
+        <div id="bloqueMensaje">
+					<span id="titulo">
+						Sistema de Administración
+					</span>
+            <span id="mensaje">
+						<i class="fa fa-user"></i> Login
+					</span>
+            <span id="descripcion">
+						Sistema exclusivo para personal autorizado
+					</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
